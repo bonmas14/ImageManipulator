@@ -87,34 +87,6 @@ namespace ImageManipulator.Tests
         }
 
         [TestMethod]
-        public void ShiftPosX()
-        {
-            var zone = GetManipulator();
-
-            zone.SetSizeX(2);
-
-            var a = zone.ShiftPositionX(50);
-
-            var b = zone.ShiftPositionX(-5);
-
-            Assert.IsFalse(a || b);
-        }
-
-        [TestMethod]
-        public void ShiftPosY()
-        {
-            var zone = GetManipulator();
-            
-            zone.SetSizeY(2);
-
-            var a = zone.ShiftPositionY(50);
-
-            var b = zone.ShiftPositionY(-5);
-
-            Assert.IsFalse(a || b);
-        }
-
-        [TestMethod]
         public void SetPosX()
         {
             var zone = GetManipulator();
