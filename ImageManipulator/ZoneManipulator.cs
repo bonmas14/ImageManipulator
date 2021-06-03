@@ -36,7 +36,7 @@ namespace ImageManipulator
 
         public bool SetSizeX(int x)
         {
-            if ((viewZonePosX + x) < (Width - x))
+            if ((viewZonePosX + x) < (Width - x) && x > 0)
             {
                 viewZoneSizeX = x;
 
@@ -50,7 +50,7 @@ namespace ImageManipulator
 
         public bool SetSizeY(int y)
         {
-            if ((viewZonePosY + y) < (Height - y))
+            if ((viewZonePosY + y) < (Height - y) && y > 0)
             {
                 viewZoneSizeY = y;
 
@@ -64,7 +64,7 @@ namespace ImageManipulator
 
         public bool SetPositionX(int x)
         {
-            if (x < (Width - viewZoneSizeX))
+            if (x < (Width - viewZoneSizeX) && x >= 0)
             {
                 viewZonePosX = x;
 
@@ -78,7 +78,7 @@ namespace ImageManipulator
 
         public bool SetPositionY(int y)
         {
-            if (y < (Height - viewZoneSizeY))
+            if (y < (Height - viewZoneSizeY) && y >= 0)
             {
                 viewZonePosY = y;
 
