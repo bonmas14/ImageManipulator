@@ -67,13 +67,11 @@ namespace ImageManipulator.Tests
         {
             var zone = GetManipulator();
 
-            var expectedFalse = zone.SetSizeX(50);
+            var a = zone.SetSizeX(50);
 
-            var expectedTrue = zone.SetSizeX(5);
+            var b = zone.SetSizeX(-5);
 
-            Assert.IsFalse(expectedFalse);
-
-            Assert.IsTrue(expectedTrue);
+            Assert.IsFalse(a || b);
         }
 
         [TestMethod]
@@ -81,13 +79,11 @@ namespace ImageManipulator.Tests
         {
             var zone = GetManipulator();
 
-            var expectedFalse = zone.SetSizeY(50);
+            var a = zone.SetSizeY(50);
 
-            var expectedTrue = zone.SetSizeY(5);
+            var b = zone.SetSizeY(-5);
 
-            Assert.IsFalse(expectedFalse);
-
-            Assert.IsTrue(expectedTrue);
+            Assert.IsFalse(a || b);
         }
 
         [TestMethod]
@@ -97,13 +93,11 @@ namespace ImageManipulator.Tests
 
             zone.SetSizeX(2);
 
-            var expectedFalse = zone.ShiftPositionX(50);
+            var a = zone.ShiftPositionX(50);
 
-            var expectedTrue = zone.ShiftPositionX(5);
+            var b = zone.ShiftPositionX(-5);
 
-            Assert.IsFalse(expectedFalse);
-
-            Assert.IsTrue(expectedTrue);
+            Assert.IsFalse(a || b);
         }
 
         [TestMethod]
@@ -113,13 +107,11 @@ namespace ImageManipulator.Tests
             
             zone.SetSizeY(2);
 
-            var expectedFalse = zone.ShiftPositionY(50);
+            var a = zone.ShiftPositionY(50);
 
-            var expectedTrue = zone.ShiftPositionY(5);
+            var b = zone.ShiftPositionY(-5);
 
-            Assert.IsFalse(expectedFalse);
-
-            Assert.IsTrue(expectedTrue);
+            Assert.IsFalse(a || b);
         }
 
         [TestMethod]
@@ -129,13 +121,11 @@ namespace ImageManipulator.Tests
 
             zone.SetSizeX(2);
 
-            var expectedFalse = zone.SetPositionX(50);
+            var a = zone.SetPositionX(50);
 
-            var expectedTrue = zone.SetPositionX(5);
+            var b = zone.SetPositionX(-5);
 
-            Assert.IsFalse(expectedFalse);
-
-            Assert.IsTrue(expectedTrue);
+            Assert.IsFalse(a || b);
         }
 
         [TestMethod]
@@ -145,13 +135,11 @@ namespace ImageManipulator.Tests
 
             zone.SetSizeY(2);
 
-            var expectedFalse = zone.SetPositionY(50);
+            var a = zone.SetPositionY(50);
 
-            var expectedTrue = zone.SetPositionY(5);
+            var b = zone.SetPositionY(-5);
 
-            Assert.IsFalse(expectedFalse);
-
-            Assert.IsTrue(expectedTrue);
+            Assert.IsFalse(a || b);
         }
 
 
