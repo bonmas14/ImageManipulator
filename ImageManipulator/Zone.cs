@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ImageManipulator
 {
-    public sealed class ZoneManipulator
+    public sealed class Zone
     {
         int viewZonePosX = 0;
         int viewZonePosY = 0;
@@ -15,13 +15,13 @@ namespace ImageManipulator
         int viewZoneSizeX = 1;
         int viewZoneSizeY = 1;
 
-        int Width;
-        int Height;
+        int _width;
+        int _height;
 
-        public ZoneManipulator(int width, int height)
+        public Zone(int width, int height)
         {
-            Width = width;
-            Height = height;
+            _width = width;
+            _height = height;
         }
 
         public Point GetPosition()
@@ -36,7 +36,7 @@ namespace ImageManipulator
 
         public bool SetSizeX(int x)
         {
-            if ((viewZonePosX + x) < (Width - x) && x > 0)
+            if ((viewZonePosX + x) < (_width - x) && x > 0)
             {
                 viewZoneSizeX = x;
 
@@ -50,7 +50,7 @@ namespace ImageManipulator
 
         public bool SetSizeY(int y)
         {
-            if ((viewZonePosY + y) < (Height - y) && y > 0)
+            if ((viewZonePosY + y) < (_height - y) && y > 0)
             {
                 viewZoneSizeY = y;
 
@@ -64,7 +64,7 @@ namespace ImageManipulator
 
         public bool SetPositionX(int x)
         {
-            if (x < (Width - viewZoneSizeX) && x >= 0)
+            if (x < (_width - viewZoneSizeX) && x >= 0)
             {
                 viewZonePosX = x;
 
@@ -78,7 +78,7 @@ namespace ImageManipulator
 
         public bool SetPositionY(int y)
         {
-            if (y < (Height - viewZoneSizeY) && y >= 0)
+            if (y < (_height - viewZoneSizeY) && y >= 0)
             {
                 viewZonePosY = y;
 

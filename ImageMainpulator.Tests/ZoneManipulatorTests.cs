@@ -57,9 +57,9 @@ namespace ImageManipulator.Tests
         //
         #endregion
 
-        public ZoneManipulator GetManipulator()
+        public Zone GetManipulator()
         {
-            return new ZoneManipulator(20, 20);
+            return new Zone(20, 20);
         }
 
         [TestMethod]

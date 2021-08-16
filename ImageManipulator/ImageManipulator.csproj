@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="BitmapManipulator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ZoneManipulator.cs" />
+    <Compile Include="Zone.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

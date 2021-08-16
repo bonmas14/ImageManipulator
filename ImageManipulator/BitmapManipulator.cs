@@ -9,21 +9,21 @@ namespace ImageManipulator
 {
     public sealed class BitmapManipulator
     {
-        public ZoneManipulator zone;
+        public Zone _zone;
 
-        Bitmap image;
+        Bitmap _image;
 
         public BitmapManipulator(Bitmap image)
         {
-            this.image = image;
+            _image = image;
 
-            zone = new ZoneManipulator(image.Width, image.Height);
+            _zone = new Zone(image.Width, image.Height);
         }
 
         public Color[] GetZone()
         {
-            var pos  = zone.GetPosition();
-            var size = zone.GetSize();
+            var pos  = _zone.GetPosition();
+            var size = _zone.GetSize();
 
             List<Color> colors = new List<Color>(size.X * size.Y);
 
@@ -31,7 +31,7 @@ namespace ImageManipulator
             {
                 for (int y = pos.Y; y < pos.Y + size.Y; y++)
                 {
-                    colors.Add(image.GetPixel(x, y));
+                    colors.Add(_image.GetPixel(x, y));
                 }
             }
 
